@@ -1,0 +1,128 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.118.828.0 (23.06)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"test\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "es-ES",
+    "cultures": [
+      {
+        "name": "es-ES",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "es-ES",
+    "tables": [
+      {
+        "name": "test",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "coches",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e3682764-6cde-471e-a4f7-9a0d894d4015",
+            "sourceColumn": "coches",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "hab",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cb8cdd4f-4f62-4ed3-9569-ea28b5c92d8a",
+            "sourceColumn": "hab",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "pais",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f810b82f-94f3-41bd-90a9-780435a35950",
+            "sourceColumn": "pais",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pib",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "95266812-1374-4488-940e-b36f4a914a77",
+            "sourceColumn": "pib",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "ad838dc5-509a-4f2a-86b1-b5194b62e74d",
+        "partitions": [
+          {
+            "name": "test-4d5b807a-40aa-4323-9de5-f069bab02237",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"TYzBDcAgDAN3yZtHQqBiF8SvdACq7l+noAbLDzs5uVa6BgWKKp+johw8ZTGv2EKlfuNikCRYUFL5ybyTzyKn1UZVfTUxb/DZ7Q0SwxBKcVQcbS8=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [pais = _t, pib = _t, hab = _t, coches = _t]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(Origen,{{\"pais\", type text}, {\"pib\", Int64.Type}, {\"hab\", Int64.Type}, {\"coches\", Int64.Type}})",
+                "in",
+                "    #\"Tipo cambiado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
