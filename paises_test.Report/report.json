@@ -27,6 +27,15 @@
       "name": "ReportSection",
       "visualContainers": [
         {
+          "config": "{\"name\":\"0ef26b285755c7068673\",\"layouts\":[{\"id\":0,\"position\":{\"x\":541.3515565679576,\"y\":50.53910402429765,\"z\":1,\"width\":300.31890660592256,\"height\":150.64540622627183,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(test.coches)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"test\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"coches\"}},\"Function\":0},\"Name\":\"Sum(test.coches)\",\"NativeReferenceName\":\"coches\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"coches\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 150.65,
+          "width": 300.32,
+          "x": 541.35,
+          "y": 50.54,
+          "z": 1.00
+        },
+        {
           "config": "{\"name\":\"b54ff5034faac3719013\",\"layouts\":[{\"id\":0,\"position\":{\"x\":367.3804100227791,\"y\":219.65072133637057,\"z\":0,\"width\":622.9916476841306,\"height\":357.661351556568,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"test.pais\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(test.coches)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"test\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"pais\"},\"Name\":\"test.pais\",\"NativeReferenceName\":\"pais\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"coches\"}},\"Function\":0},\"Name\":\"Sum(test.coches)\",\"NativeReferenceName\":\"coches\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"coches\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 357.66,
